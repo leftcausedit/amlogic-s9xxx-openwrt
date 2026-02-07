@@ -130,7 +130,7 @@ custom_packages() {
     [[ "${?}" -eq "0" ]] || error_msg "[ ${amlogic_plugin} ] download failed!"
     echo -e "${INFO} The [ ${amlogic_plugin} ] is downloaded successfully."
     #
-    amlogic_i18n="luci-i18n-amlogic"
+    amlogic_i18n="luci-i18n-amlogic-zh-cn"
     amlogic_i18n_down="$(curl -s ${amlogic_api} | grep "browser_download_url" | grep -oE "https.*${amlogic_i18n}.*.ipk" | head -n 1)"
     curl -fsSOJL ${amlogic_i18n_down}
     [[ "${?}" -eq "0" ]] || error_msg "[ ${amlogic_i18n} ] download failed!"
